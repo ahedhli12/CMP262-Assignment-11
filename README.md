@@ -1,3 +1,109 @@
 # CMP-262 — Assignment 11: News Article Sentiment Analysis
 
-Student starter template for textbook Exercises 12.3 and 12.4. Detailed instructions and files are being added.
+**Instructor: Prof. Amjed Hedhli | Total: 20 points | Due: See Blackboard Ultra**
+
+## Objective
+
+Complete **Exercises 12.3 and 12.4 (textbook page 512)**. Retrieve a current news article using Python's **requests** and **BeautifulSoup**, then use **TextBlob** to compare two approaches to sentiment analysis on the full article **and on every sentence**.
+
+## Getting Started
+
+1. Select **Use this template → Create a new repository** (when enabled); otherwise fork the starter repository.
+2. Create a **public** repository under your own GitHub account. Suggested name: `LastName-FirstName-CMP262-Assignment11`.
+3. Clone your own repository and open the entire folder in **Visual Studio Code**.
+4. Open `NewsArticleSentimentAnalysis.ipynb`, select your Python kernel, and complete all TODOs.
+5. Complete `AI-Use-Report.md`.
+6. Save the notebook **with outputs** and submit your own repository link in Blackboard Ultra.
+
+## Setup
+
+If the imports fail, install packages into the Python environment selected for your notebook:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+The Naive Bayes analyzer also requires NLTK resources. Download them once as needed:
+
+```python
+import nltk
+nltk.download("movie_reviews")
+nltk.download("punkt")
+nltk.download("punkt_tab")
+```
+
+## Directions
+
+### Part 1 — Exercise 12.3: Sentiment of a News Article
+
+- Choose a **current news article**. Record the publisher, headline, URL, publication date (if provided), and access date.
+- Use `requests` and `BeautifulSoup` to retrieve the webpage and extract article text, following **Exercise 12.1**.
+- Exercise 12.1 demonstrates `text = soup.get_text(strip=True)` for removing HTML tags. For a real news page, target the article body and preserve word spacing; `get_text(" ", strip=True)` can help.
+- Construct a standard `TextBlob` from the article's text.
+- Display sentiment **for the entire article** and **for each sentence**, showing polarity and subjectivity.
+
+### Part 2 — Exercise 12.4: NaiveBayesAnalyzer
+
+- Repeat the analysis with `TextBlob(article_text, analyzer=NaiveBayesAnalyzer())`.
+- Display the sentiment classification (`pos` or `neg`) and the positive and negative probabilities for the **full article** and **each sentence**.
+- Analyze the **same article text** with both methods so you can compare them.
+
+### Part 3 — Interpretation and submission
+
+- Write a paragraph explaining the differences in the two analyses, citing real scores and **at least one sentence-level example**.
+- Explain one potential reason for disagreement and one limitation.
+- Use Markdown cells to organize your notebook and comment on important Python steps.
+- Restart the kernel, **Run All**, and save the notebook with successful outputs.
+- Complete `AI-Use-Report.md`.
+
+**Responsible scraping:** Read the site's robots.txt and applicable policies. Do not bypass paywalls, logins, rate limits, or anti-bot systems. If your selected source prohibits automated access, choose another news article. Do not scrape personal data.
+
+## Grading Rubric — 20 points
+
+| Criterion | Points |
+|---|---:|
+| News article selection, source information, and responsible retrieval | 2 |
+| requests and BeautifulSoup HTML/article-text extraction | 3 |
+| Default TextBlob whole-article sentiment | 2 |
+| Default TextBlob sentiment for each sentence | 2 |
+| NaiveBayesAnalyzer whole-article classification and probabilities | 3 |
+| NaiveBayesAnalyzer analysis for each sentence | 3 |
+| Thoughtful result comparison, sentence example, and limitation | 3 |
+| Notebook organization, AI-use report, GitHub submission | 2 |
+| **Total** | **20** |
+
+See [RUBRIC.md](RUBRIC.md) for grading guidance.
+
+## Repository Files
+
+```text
+CMP262-Assignment-11/
+├── .github/
+│   └── copilot-instructions.md
+├── .vscode/
+│   ├── extensions.json
+│   └── settings.json
+├── data/
+│   └── .gitkeep
+├── NewsArticleSentimentAnalysis.ipynb
+├── README.md
+├── RUBRIC.md
+├── AI-Use-Report.md
+├── requirements.txt
+└── .gitignore
+```
+
+The `data/` folder is provided for optional processing artifacts. A CSV file is **not required** for this assignment. Do not redistribute full copyrighted article text unnecessarily.
+
+## Saving and Submitting
+
+```bash
+git status
+git add .
+git commit -m "Complete Assignment 11 sentiment analysis"
+git push
+```
+
+Open your GitHub repository to confirm that the notebook displays your code and outputs. **Submit your public repository URL in Blackboard Ultra**. GitHub upload alone does not count as a Blackboard submission.
+
+AI may help explain concepts or debugging; students must perform and understand the submitted analysis, and document AI use in `AI-Use-Report.md`.
