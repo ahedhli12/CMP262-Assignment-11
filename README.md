@@ -1,10 +1,14 @@
 # CMP-262 — Assignment 11: News Article Sentiment Analysis
 
-**Instructor: Prof. Amjed Hedhli | Total: 20 points | Due: See Blackboard Ultra**
+**Instructor: Prof. Amjed Hedhli | Total: 100 points | Due: See Blackboard Ultra**
 
 ## Objective
 
 Retrieve a current news article using Python's **requests** and **BeautifulSoup**, then use **TextBlob** to compare two approaches to sentiment analysis on the full article **and on every sentence**.
+
+## Student Handout
+
+Read [Student-Handout.md](Student-Handout.md) for a beginner-friendly explanation of the tools, sentiment scores, setup, troubleshooting, and submission checklist. No textbook is required.
 
 ## Getting Started
 
@@ -58,21 +62,9 @@ nltk.download("punkt_tab")
 
 **Responsible scraping:** Read the site's robots.txt and applicable policies. Do not bypass paywalls, logins, rate limits, or anti-bot systems. If your selected source prohibits automated access, choose another news article. Do not scrape personal data.
 
-## Grading Rubric — 20 points
+## Grading Rubric — 100 points
 
-| Criterion | Points |
-|---|---:|
-| News article selection, source information, and responsible retrieval | 2 |
-| requests and BeautifulSoup HTML/article-text extraction | 3 |
-| Default TextBlob whole-article sentiment | 2 |
-| Default TextBlob sentiment for each sentence | 2 |
-| NaiveBayesAnalyzer whole-article classification and probabilities | 3 |
-| NaiveBayesAnalyzer analysis for each sentence | 3 |
-| Thoughtful result comparison, sentence example, and limitation | 3 |
-| Notebook organization, AI-use report, GitHub submission | 2 |
-| **Total** | **20** |
-
-See [RUBRIC.md](RUBRIC.md) for grading guidance.
+See [RUBRIC.md](RUBRIC.md) for the full 100-point grading breakdown.
 
 ## Repository Files
 
@@ -87,6 +79,7 @@ CMP262-Assignment-11/
 │   └── .gitkeep
 ├── NewsArticleSentimentAnalysis.ipynb
 ├── README.md
+├── Student-Handout.md
 ├── RUBRIC.md
 ├── AI-Use-Report.md
 ├── requirements.txt
