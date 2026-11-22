@@ -4,7 +4,7 @@
 
 ## Objective
 
-Complete **Exercises 12.3 and 12.4 (textbook page 512)**. Retrieve a current news article using Python's **requests** and **BeautifulSoup**, then use **TextBlob** to compare two approaches to sentiment analysis on the full article **and on every sentence**.
+Retrieve a current news article using Python's **requests** and **BeautifulSoup**, then use **TextBlob** to compare two approaches to sentiment analysis on the full article **and on every sentence**.
 
 ## Getting Started
 
@@ -34,15 +34,15 @@ nltk.download("punkt_tab")
 
 ## Directions
 
-### Part 1 — Exercise 12.3: Sentiment of a News Article
+### Part 1 — Part 1: Sentiment of a News Article
 
 - Choose a **current news article**. Record the publisher, headline, URL, publication date (if provided), and access date.
-- Use `requests` and `BeautifulSoup` to retrieve the webpage and extract article text, following **Exercise 12.1**.
-- Exercise 12.1 demonstrates `text = soup.get_text(strip=True)` for removing HTML tags. For a real news page, target the article body and preserve word spacing; `get_text(" ", strip=True)` can help.
+- Use `requests` and `BeautifulSoup` to retrieve the webpage and extract article text.
+- For example, `text = soup.get_text(strip=True)` for removing HTML tags. For a real news page, target the article body and preserve word spacing; `get_text(" ", strip=True)` can help.
 - Construct a standard `TextBlob` from the article's text.
 - Display sentiment **for the entire article** and **for each sentence**, showing polarity and subjectivity.
 
-### Part 2 — Exercise 12.4: NaiveBayesAnalyzer
+### Part 2 — Part 2: NaiveBayesAnalyzer
 
 - Repeat the analysis with `TextBlob(article_text, analyzer=NaiveBayesAnalyzer())`.
 - Display the sentiment classification (`pos` or `neg`) and the positive and negative probabilities for the **full article** and **each sentence**.
