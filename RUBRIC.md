@@ -1,17 +1,20 @@
-# CMP-262 Assignment 11 — Rubric (20 points)
+# CMP-262 Assignment 11 — Grading Rubric (100 points)
 
 | Criterion | Points |
 |---|---:|
-| News article selection, source information, and responsible retrieval | 2 |
-| requests and BeautifulSoup HTML/article-text extraction | 3 |
-| Default TextBlob whole-article sentiment | 2 |
-| Default TextBlob sentiment for each sentence | 2 |
-| NaiveBayesAnalyzer whole-article classification and probabilities | 3 |
-| NaiveBayesAnalyzer analysis for each sentence | 3 |
-| Thoughtful result comparison, sentence example, and limitation | 3 |
-| Notebook organization, AI-use report, GitHub submission | 2 |
-| **Total** | **20** |
+| Current article selection, complete source details, and responsible access | 10 |
+| Download webpage with requests; parse and extract article text with BeautifulSoup | 15 |
+| Default TextBlob: correct whole-article polarity and subjectivity | 10 |
+| Default TextBlob: sentiment output for every sentence | 15 |
+| NaiveBayesAnalyzer: correct whole-article classification and probabilities | 10 |
+| NaiveBayesAnalyzer: classification and probabilities for every sentence | 15 |
+| Written comparison using real values, sentence-level example, and limitation | 15 |
+| Notebook organization, readable comments, visible outputs, AI-use report, and GitHub submission | 10 |
+| **Total** | **100** |
 
-### Grading notes
-
-Students must show actual program output for the **whole article and every sentence** from both analyzers. Scores should be generated, not hard-coded. The final comparison must discuss real outputs and a concrete sentence-level example. Work must be reproducible, saved with outputs, and submitted as a public GitHub URL in Blackboard Ultra.
+## Grading notes
+- Students must retrieve an actual current article, not use a hard-coded sample paragraph as the submission.
+- The notebook must display actual computed results for the full article **and every sentence** using both analyzers.
+- Article-only extraction matters: website menus, advertisements, and unrelated content should not dominate the text.
+- The written comparison must refer to real outputs, include at least one sentence-level example, and acknowledge limitations.
+- Full credit for organization requires Markdown sections, helpful code comments, a saved notebook with visible outputs, completed AI-use report, and the student's own accessible GitHub link.
